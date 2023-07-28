@@ -4,7 +4,11 @@ function menu() {
   let header = document.querySelector('header')
   let navBar = header.querySelector('nav')
   let menu = header.querySelector('.logo-area svg')
+  let path = menu.querySelector('path')
   let linkMenu = navBar.querySelectorAll('a')
+
+  let svgAberto = 'M6 18L18 6M6 6l12 12'
+  let svgFechado = 'M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5'
 
   // Se for no máximo 768px
   if (mdDispo) {
@@ -12,20 +16,26 @@ function menu() {
     menu.addEventListener('click', () => {
       let posiWindow = window.scrollY
       menuClick++
+
+      //Menu Aberto
       if (menuClick == 1) {
         document.body.classList.toggle('overflow-hidden')
         navBar.classList.toggle('hidden')
         header.classList.toggle('h-[100vh]')
+        path.setAttribute('d', svgAberto)
 
         if (posiWindow < 100) {
           header.classList.replace('bg-transparent', 'bg-[#161616]')
         }
 
-      } else {
+      }
+      // Menu Fechado
+      else {
         menuClick = 0
         document.body.classList.toggle('overflow-hidden')
         navBar.classList.toggle('hidden')
         header.classList.toggle('h-[100vh]')
+        path.setAttribute('d', svgFechado)
 
         if (posiWindow < 100) {
           header.classList.replace('bg-[#161616]', 'bg-transparent')
