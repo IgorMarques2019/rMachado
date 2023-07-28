@@ -1,0 +1,34 @@
+.allAnimate {
+  opacity: 0;
+}
+.a_enter {
+  animation: animationEnter 0.5s forwards;
+}
+
+.a_exit {
+  animation: animationExit 0.5s forwards;
+}
+
+@keyframes animationEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animationExit {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}

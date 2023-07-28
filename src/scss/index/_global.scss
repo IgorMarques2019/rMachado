@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap");
+
+
+@import 'keyframes';
+
+$display: "DM Serif Display", serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+.text-deco {
+  font-family: $display;
+}
+
+

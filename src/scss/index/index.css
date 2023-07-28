@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap");
+.allAnimate {
+  opacity: 0;
+}
+
+.a_enter {
+  animation: animationEnter 0.5s forwards;
+}
+
+.a_exit {
+  animation: animationExit 0.5s forwards;
+}
+
+@keyframes animationEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes animationExit {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+.text-deco {
+  font-family: "DM Serif Display", serif;
+}
+
+#bannerPrincipal {
+  background-image: url("../../img/r-architecture-2gDwlIim3Uw-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#bannerPrincipal .bg-banner {
+  background-color: rgba(0, 0, 0, 0.695);
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: #161616;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgb(45, 45, 45);
+  border-radius: 20px;
+}
+
+#mais_conforto {
+  background: url("../../img/house.png") top 10px right 50px no-repeat;
+  background-size: 150px;
+}/*# sourceMappingURL=index.css.map */
