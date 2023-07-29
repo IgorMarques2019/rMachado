@@ -47,6 +47,7 @@ function menu() {
       link.addEventListener('click', () => {
         setTimeout(() => {
           menuClick = 0;
+          path.setAttribute('d', svgFechado)
           let posiWindow = window.scrollY
           document.body.classList.toggle('overflow-hidden')
           navBar.classList.toggle('hidden')
