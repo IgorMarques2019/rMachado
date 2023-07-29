@@ -120,14 +120,26 @@ function tagRoll() {
   let catImoveisFilho = catImoveisPai.querySelector('#tags_imoveis')
   let tagsImoveis = catImoveisFilho.querySelectorAll('div')
   let scrollIndex = 0
-  let qtdImoveis = tagsImoveis.length - 1;
+  let qtdImoveis = tagsImoveis.length - 1
 
-
-  setInterval(() => {
-    if (scrollIndex == qtdImoveis) {
-
+  
+  var interval = setInterval(() => {
+    scrollIndex++
+    console.log(scrollIndex)
+    if(scrollIndex > qtdImoveis){
+      scrollIndex = 0
     }
-  }, 2500);
+    let leftItem = tagsImoveis[scrollIndex].offsetLeft
+    catImoveisFilho.scrollTo({
+      left:leftItem,
+      behavior:'smooth'
+    })
+
+  },1000);
+
+  catImoveisFilho.addEventListener('keydown',()=>{
+    console.log(window.KeyboardEvent)
+  })
 
 
 
