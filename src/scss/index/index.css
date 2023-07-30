@@ -64,4 +64,8 @@ html::-webkit-scrollbar-thumb {
 #mais_conforto {
   background: url("../../img/house.png") top 10px right 50px no-repeat;
   background-size: 150px;
+}
+
+#tags_imoveis::-webkit-scrollbar {
+  visibility: hidden;
 }/*# sourceMappingURL=index.css.map */
